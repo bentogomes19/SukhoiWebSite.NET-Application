@@ -1,0 +1,7 @@
+Caixa de correio não disponível. A resposta do servidor foi: Access denied - Invalid HELO name (See RFC2821 4.1.1.1)
+   em System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   em System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   em System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   em System.Net.Mail.SmtpClient.Send(MailMessage message)
+   em Projeto3.FaleConosco.Enviar_Click(Object sender, EventArgs e) na D:\FATEC 2 Semestre\Programação em C#\Visual Studio 2022\Ads2024CS\Projeto3\FaleConosco.aspx.cs:linha 55
+--------------------------------------

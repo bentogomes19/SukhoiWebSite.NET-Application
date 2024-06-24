@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Projeto3.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- StyleSheet.css contém classes para diversos estilos -->
+    <link href="Css_Javascript/StyleSheet.css" rel="stylesheet" />
+    <!-- Projeto.css contém as classes para estruturar a master page -->
+    <link href="Css_Javascript/Projeto.css" rel="stylesheet" />
+    <!-- RECURSOS PARA EXIBIR SLIDES -->
+    <link href="Css_Javascript/flexslider.css" rel="stylesheet" />
+    <!-- PRIMEIRO ESTA BIBLIOTECA -->
+    <script src="Css_Javascript/jquery-1.7.2.min.js"></script>
+    <script src="Css_Javascript/flexslider.min.js"></script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <!-- CABEÇALHO -->
+        <div class="cabecalho content-wrap">
+            <!-- LOGOMARCA -->
+            <div class="logomarca">
+                <img src="../Images/logo1.png" />
+            </div>
+            <!-- BARRA TÍTULO -->
+            <div class="barra-titulo">
+                <h2>JSC Sukhoi - Store </h2>
+            </div>
+            <!-- BARRA DO MENU -->
+            <div class="barra-menu">
+                <a href="../Default.aspx">Home</a>
+                <a href="../Sobre.aspx">About Us</a>
+
+                <asp:HyperLink NavigateUrl="~/Admin/ExibirUsuarios.aspx" ID="CadastroUsuarios" runat="server">Show Users Registered</asp:HyperLink>
+
+                <asp:HyperLink NavigateUrl="~/Admin/ExibirTodosAcessos.aspx" ID="ExibirAcessos" runat="server">Recents Logins</asp:HyperLink>
+
+                <asp:HyperLink NavigateUrl="~/Admin/CadastroCliente.aspx" ID="CadastroCliente" runat="server">Register Customers</asp:HyperLink>
+
+                <a href="../FaleConosco.aspx">Contact Us</a>
+
+                <a href="CadastroUsuarios.aspx">Register User</a>
+
+                <asp:HyperLink ID="Login" NavigateUrl="~/Login.aspx" Visible="true" runat="server">Log In</asp:HyperLink>
+
+                <asp:LinkButton ID="Logout" Visible="false" OnClick="Logout_Click" runat="server">Log Out</asp:LinkButton>
+            </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="conteudo content-wrap">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- RODAPÉ -->
+        <div class="rodape">
+            <div class="content-wrap">
+                <h2>Sukhoi Shop • Russia Federation</h2>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

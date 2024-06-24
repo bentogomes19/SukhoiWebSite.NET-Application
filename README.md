@@ -1,6 +1,6 @@
 # Sukhoi Website - ASP.NET Framework Application #
 
-<h3>Project made in college. The teacher requested the following steps<h3>
+Project made in college. The teacher requested the following steps
 
 - Add the data to the customers table in the database
 CUSTOMERS
